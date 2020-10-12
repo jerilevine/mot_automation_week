@@ -1,0 +1,11 @@
+# Fill out with real values and save as env.yml
+
+local:
+  app_url: http://localhost:8080
+  username: fakename
+  password: fakepassword
+
+remote:
+  app_url: https://someremoteendpoint
+  username: fakeremotename
+  password: fakeremotepassword
