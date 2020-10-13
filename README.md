@@ -1,0 +1,1 @@
+Challenges for the Ministry of Test's [Automation Week](https://club.ministryoftesting.com/t/what-is-automation-week/43663)!
