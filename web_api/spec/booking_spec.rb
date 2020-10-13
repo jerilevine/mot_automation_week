@@ -8,7 +8,7 @@ describe 'booking' do
     resp = RestClient::Request.execute(method: :get, url: "#{url}")
     expect(resp.code).to eq(200)
   end
-  
+
   it 'can list bookings for a room via GET' do
     # here we go assuming that a room exists again
     resp = RestClient::Request.execute(method: :get, url: "#{url}",

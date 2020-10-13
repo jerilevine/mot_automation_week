@@ -5,7 +5,6 @@ describe 'room' do
   let(:url) { "#{base_url}/room/" }
 
   it 'can list rooms via GET' do
-    # all rooms
     resp = RestClient::Request.execute(method: :get, url: url)
     expect(resp.code).to eq(200)
   end
