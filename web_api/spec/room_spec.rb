@@ -46,8 +46,8 @@ describe 'room' do
     # what could possibly go wrong
     resp = RestClient::Request.execute(method: :get, url: url)
     last_room_id = JSON.parse(resp.body)['rooms'].last['roomid']
-    resp = RestClient::Request.execute(method: :delete, url: "#{url}#{last_room_id}",
+    resp2 = RestClient::Request.execute(method: :delete, url: "#{url}#{last_room_id}",
                                        cookies: { token: token })
-    expect(resp.code).to eq(202)
+    expect(resp2.code).to eq(202)
   end
 end

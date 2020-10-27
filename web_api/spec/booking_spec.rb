@@ -49,18 +49,18 @@ describe 'booking' do
                 phone: "18008675309",
                 roomid: 1
               }.to_json
-    resp = RestClient::Request.execute(method: :put, url: "#{url}#{last_booking_id}",
+    resp2 = RestClient::Request.execute(method: :put, url: "#{url}#{last_booking_id}",
                                        payload: payload,
                                        cookies: { token: token },
                                        headers: { content_type: 'application/json' })
-    expect(resp.code).to eq(200)
+    expect(resp2.code).to eq(200)
   end
 
   it 'can delete a booking via DELETE' do
     resp = RestClient::Request.execute(method: :get, url: url)
     last_booking_id = JSON.parse(resp.body)['bookings'].last['bookingid']
-    resp = RestClient::Request.execute(method: :delete, url: "#{url}#{last_booking_id}",
+    resp2 = RestClient::Request.execute(method: :delete, url: "#{url}#{last_booking_id}",
                                        cookies: { token: token })
-    expect(resp.code).to eq(202)
+    expect(resp2.code).to eq(202)
   end
 end
